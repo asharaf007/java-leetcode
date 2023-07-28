@@ -1,7 +1,7 @@
 package Java.leetcodeSolutions.medium;
 
-import java.util.Stack;
-
+import java.util.ArrayDeque;
+import java.util.Deque;
 //https://leetcode.com/problems/decode-string/
 public class DecodeString {
     public static void main(String[] args) {
@@ -9,8 +9,8 @@ public class DecodeString {
         System.out.println(decodeString(s));
     }
     public static String decodeString(String s) {
-        Stack<String> stack=new Stack<>();
-        String ans="";
+        Deque<String> stack=new ArrayDeque<>();
+        StringBuilder ans=new StringBuilder();
         int i=0;
         while(i<s.length()){
             if(s.charAt(i)=='['){
@@ -21,16 +21,16 @@ public class DecodeString {
                 String temp=stack.pop();
                 stack.pop();
                 int times=Integer.parseInt(stack.pop());
-                String st="";
+                StringBuilder st=new StringBuilder();
                 for(int j=0;j<times;j++){
-                    st+=temp;
+                    st.append(temp);
                 }
                 if(!stack.isEmpty()&&!stack.peek().equals("[")){
-                    st=stack.pop()+st;
-                    stack.push(st);
+                    st.insert(0,stack.pop());
+                    stack.push(st.toString());
                 }
                 else{
-                    stack.push(st);
+                    stack.push(st.toString());
                 }
                 i++;
             }
@@ -43,24 +43,24 @@ public class DecodeString {
                     stack.push(num+"");
                     continue;
                 }
-                String temp="";
+                StringBuilder temp=new StringBuilder();
                 while(i<s.length()&&Character.isLetter(s.charAt(i))){
-                    temp+=s.charAt(i++);
+                    temp.append(s.charAt(i++));
                 }
-                if(temp!=""){
+                if(temp.toString()!=""){
                     if(!stack.isEmpty()&&!stack.peek().equals("[")){
-                        temp=stack.pop()+temp;
-                        stack.push(temp);
+                        temp.insert(0,stack.pop());
+                        stack.push(temp.toString());
                     }
                     else{
-                        stack.push(temp);
+                        stack.push(temp.toString());
                     }
                 }
             }
         }
         while(!stack.isEmpty()){
-            ans=stack.pop()+ans;
+            ans.insert(0,stack.pop());
         }
-        return ans;
+        return ans.toString();
     }
 }
