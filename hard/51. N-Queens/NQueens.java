@@ -9,35 +9,29 @@ public class NQueens {
         int n=4;
         System.out.println(solveNQueens(n));
     }
+    private static boolean[][] visited;
     public static List<List<String>> solveNQueens(int n) {
-        //https://leetcode.com/problems/n-queens/
-        boolean[][] visited=new boolean[n][n];
-        StringBuilder s= new StringBuilder("");
-        for(int i=0;i<n;i++){
-            s.append(".");
-        }
-        return waysPrint(visited,0,s.toString(),new ArrayList<>(),new ArrayList<>());
+        visited=new boolean[n][n];
+        return waysPrint(0,new ArrayList<>(),new ArrayList<>());
     }
-    static  List<List<String>> waysPrint(boolean[][] visited, int r,String s,List<String> l,List<List<String>> ll){
-        //https://leetcode.com/problems/n-queens/
+    private static List<List<String>> waysPrint(int r,List<String> l,List<List<String>> ll){
         if(r==visited.length){
-            ll.add(l);
+            List<String> list=new ArrayList<>(l);
+            ll.add(list);
             return ll;
         }
-        for(int i=0;i<visited[0].length;i++){
-            if(safe(visited,r,i)){
-                String ns=s.substring(0,i)+"Q"+s.substring(i+1);
-                l.add(ns);
-                ArrayList<String> nl=new ArrayList<>(l);
+        for(int i=0;i<visited.length;i++){
+            if(isSafe(r,i)){
+                l.add(getString(i));
                 visited[r][i]=true;
-                waysPrint(visited,r+1,s,nl,ll);
+                waysPrint(r+1,l,ll);
                 visited[r][i]=false;
                 l.remove(l.size()-1);
             }
         }
         return ll;
     }
-    static boolean safe(boolean[][] visited,int r, int c){
+    public static boolean isSafe(int r, int c){
         int i=r-1;
         int j=c-1;
         while(i>=0&&j>=0){
@@ -57,7 +51,7 @@ public class NQueens {
         }
         i=r-1;
         j=c+1;
-        while(i>=0&&j<visited[0].length){
+        while(i>=0&&j<visited.length){
             if(visited[i][j]){
                 return false;
             }
@@ -65,5 +59,13 @@ public class NQueens {
             j++;
         }
         return true;
+    }
+    private static String getString(int index){
+        StringBuilder s= new StringBuilder();
+        for(int i=0;i<visited.length;i++){
+            if(i==index) s.append("Q");
+            else s.append(".");
+        }
+        return s.toString();
     }
 }
