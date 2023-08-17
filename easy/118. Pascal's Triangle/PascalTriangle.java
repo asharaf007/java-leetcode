@@ -6,8 +6,7 @@ import java.util.*;
 
 public class PascalTriangle {
     public static void main(String[] args) {
-        int n=5;
-        System.out.println(generate(n));
+        System.out.println(generate(15));
     }
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> listless=new ArrayList<>();
