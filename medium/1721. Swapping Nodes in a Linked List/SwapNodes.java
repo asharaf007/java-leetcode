@@ -1,6 +1,6 @@
 package Java.leetcodeSolution.medium;
 //https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 public class SwapNodes {
         public ListNode swapNodes(ListNode head, int k) {

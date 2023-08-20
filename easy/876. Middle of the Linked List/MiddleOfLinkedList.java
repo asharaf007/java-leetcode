@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.easy;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below
 //https://leetcode.com/problems/middle-of-the-linked-list/
 public class MiddleOfLinkedList {

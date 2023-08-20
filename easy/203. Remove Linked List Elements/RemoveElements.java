@@ -1,6 +1,6 @@
 package Java.leetcodeSolution.easy;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 //https://leetcode.com/problems/remove-linked-list-elements/
 public class RemoveElements {

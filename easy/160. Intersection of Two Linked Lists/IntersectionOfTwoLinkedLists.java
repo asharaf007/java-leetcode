@@ -1,7 +1,7 @@
 package Java.leetcodeSolutions.easy;
 
-import Java.OOPS.linkedList.CustomLinkedList;
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.CustomLinkedList;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 import static Java.leetcodeSolutions.medium.LinkedListCycle2.detectCycle;
 //Question Link Below
 //https://leetcode.com/problems/intersection-of-two-linked-lists/

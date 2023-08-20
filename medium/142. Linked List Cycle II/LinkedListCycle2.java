@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.medium;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below
 //https://leetcode.com/problems/linked-list-cycle-ii/
 public class LinkedListCycle2 {

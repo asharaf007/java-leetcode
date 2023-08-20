@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.easy;
 //https://leetcode.com/problems/merge-two-sorted-lists/
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 public class MergeTwoSortedLinkedLists {
         public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

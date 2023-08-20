@@ -1,5 +1,5 @@
 package Java.leetcodeSolutions.medium;
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below
 //https://leetcode.com/problems/odd-even-linked-list/
 public class OddEvenLinkedList {

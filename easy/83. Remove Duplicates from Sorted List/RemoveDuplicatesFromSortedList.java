@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.easy;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below
 //https://leetcode.com/problems/remove-duplicates-from-sorted-list/
     public class RemoveDuplicatesFromSortedList {

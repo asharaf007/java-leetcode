@@ -1,6 +1,6 @@
 package Java.leetcodeSolution.easy;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 public class DecimalNumberFromBinary {
     public int getDecimalValue(ListNode head) {

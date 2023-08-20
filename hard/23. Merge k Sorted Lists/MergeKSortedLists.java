@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.hard;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 //Question Link Below
 //https://leetcode.com/problems/merge-k-sorted-lists/

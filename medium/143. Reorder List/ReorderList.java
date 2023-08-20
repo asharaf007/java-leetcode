@@ -1,8 +1,8 @@
 package Java.leetcodeSolutions.medium;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
-import static Java.OOPS.linkedList.CustomLinkedList.reverseList;
+import static Java.OOPS.customDataStructures.linkedList.CustomLinkedList.reverseList;
 //Question Link Below
 //https://leetcode.com/problems/reorder-list/
 public class ReorderList {

@@ -1,6 +1,6 @@
 package Java.leetcodeSolutions.medium;
-import Java.OOPS.linkedList.CustomLinkedList;
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.CustomLinkedList;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below
 //https://leetcode.com/problems/rotate-list/
 public class RotateList {

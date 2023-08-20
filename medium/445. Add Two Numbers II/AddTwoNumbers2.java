@@ -1,6 +1,6 @@
 package Java.leetcodeSolution.medium;
 
-import Java.OOPS.linkedList.ListNode;
+import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 //https://leetcode.com/problems/add-two-numbers-ii/
 public class AddTwoNumbers2 {
