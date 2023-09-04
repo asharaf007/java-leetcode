@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Stack;
 
 //https://leetcode.com/problems/design-skiplist/
-public class SkipList {
+public class Skiplist {
     private class Node{
         int val;
         Node next,down;
@@ -21,7 +21,7 @@ public class SkipList {
     }
     Node head;
     Random rand;
-    public SkipList() {
+    public Skiplist() {
         head=new Node(-1);
         rand=new Random();
     }
