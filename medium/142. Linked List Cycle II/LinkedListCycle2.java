@@ -27,7 +27,7 @@ public class LinkedListCycle2 {
         // return null
         return null;
     }
-    public static int lengthCycle(ListNode fast,ListNode slow){
+    private static int lengthCycle(ListNode fast,ListNode slow){
         int length=0;
         do{
             fast=fast.next.next;
@@ -36,7 +36,7 @@ public class LinkedListCycle2 {
         }while(fast!=slow);
         return length;
     }
-    public static ListNode headCycle(ListNode head,int length){
+    private static ListNode headCycle(ListNode head,int length){
         ListNode first=head;
         ListNode second=head;
         while(length!=0){
