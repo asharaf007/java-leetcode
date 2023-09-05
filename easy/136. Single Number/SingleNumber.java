@@ -1,7 +1,6 @@
 package Java.leetcodeSolution.easy;
 //Question Link Below
 //https://leetcode.com/problems/single-number/
-
 public class SingleNumber {
     public static void main(String[] args) {
         int[] nums={4,2,3,2,3,1,4};

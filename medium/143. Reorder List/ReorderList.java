@@ -2,11 +2,9 @@ package Java.leetcodeSolution.medium;
 
 import Java.OOPS.customDataStructures.linkedList.ListNode;
 
-import static Java.OOPS.customDataStructures.linkedList.CustomLinkedList.reverseList;
-//Question Link Below
 //https://leetcode.com/problems/reorder-list/
 public class ReorderList {
-    public static void reorderList(ListNode head) {
+    public void reorderList(ListNode head) {
         if(head==null||head.next==null){
             return;
         }
@@ -28,7 +26,7 @@ public class ReorderList {
             secondHead=node;
         }
     }
-        public static ListNode middleNode(ListNode head) {
+    private ListNode middleNode(ListNode head) {
             ListNode fast=head;
             ListNode slow=head;
             while(fast!=null&&fast.next!=null){
@@ -37,5 +35,21 @@ public class ReorderList {
             }
             return slow;
         }
+    private ListNode reverseList(ListNode head){
+        if(head==null||head.next==null){
+            return head;
+        }
+        ListNode node=head;
+        ListNode ahead=node.next;
+        node.next=null;
+        while(ahead!=null){
+            ListNode temp=ahead.next;
+            ahead.next = temp;
+            temp=ahead;
+            ahead=temp;
+        }
+        head=ahead;
+        return head;
+    }
 
 }
