@@ -1,10 +1,10 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 //Question Link Below
 //https://leetcode.com/problems/valid-sudoku/
 
 import java.util.HashSet;
 
-import static Java.leetcodeSolutions.hard.SudokuSolver.convert;
+import static Java.leetcodeSolution.hard.SudokuSolver.convert;
 
 public class ValidSudoku {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 import java.util.HashMap;
 //Question Link Below
 //https://leetcode.com/problems/copy-list-with-random-pointer/

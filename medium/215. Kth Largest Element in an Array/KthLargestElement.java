@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 //Question Link Below
 //https://leetcode.com/problems/kth-largest-element-in-an-array/
 import java.util.Comparator;

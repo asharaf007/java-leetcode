@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 //question link
 //https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 import java.util.Stack;

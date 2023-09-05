@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 import java.util.HashMap;
 //Question Link below
 //https://leetcode.com/problems/lru-cache/

@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 //question link
 //https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/
 public class WinnerTicTacToeGame {

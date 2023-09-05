@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 //https://leetcode.com/problems/valid-parentheses/
 import java.util.*;
 public class ValidParenthesis {

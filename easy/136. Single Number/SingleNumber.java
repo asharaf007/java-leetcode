@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 //Question Link Below
 //https://leetcode.com/problems/single-number/
 

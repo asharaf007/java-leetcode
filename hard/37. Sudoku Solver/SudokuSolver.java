@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.hard;
+package Java.leetcodeSolution.hard;
 //Question Link Below
 //https://leetcode.com/problems/sudoku-solver/
 public class SudokuSolver {

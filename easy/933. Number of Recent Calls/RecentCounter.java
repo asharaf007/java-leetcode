@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

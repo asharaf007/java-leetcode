@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.hard;
+package Java.leetcodeSolution.hard;
 //Question Link Below
 // https://leetcode.com/problems/split-array-largest-sum/
 public class SplitArrayLargestSum {

@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.hard;
+package Java.leetcodeSolution.hard;
 import Java.OOPS.customDataStructures.linkedList.CustomLinkedList;
 import Java.OOPS.customDataStructures.linkedList.ListNode;
 //Question Link Below

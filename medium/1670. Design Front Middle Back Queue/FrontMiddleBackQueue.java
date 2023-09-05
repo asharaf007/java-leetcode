@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 //https://leetcode.com/problems/design-front-middle-back-queue/
 public class FrontMiddleBackQueue {
     public static void main(String[] args) {

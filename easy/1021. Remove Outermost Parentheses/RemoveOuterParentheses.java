@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

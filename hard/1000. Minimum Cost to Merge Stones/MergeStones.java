@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.hard;
+package Java.leetcodeSolution.hard;
 //https://leetcode.com/problems/minimum-cost-to-merge-stones/
 public class MergeStones {
     public static void main(String[] args) {

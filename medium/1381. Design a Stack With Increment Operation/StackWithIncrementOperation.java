@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 
 //question link
 //https://leetcode.com/problems/design-a-stack-with-increment-operation/

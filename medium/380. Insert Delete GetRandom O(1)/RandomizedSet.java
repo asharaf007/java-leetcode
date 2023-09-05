@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 import java.util.HashMap;
 import java.util.Random;
 //Question link below

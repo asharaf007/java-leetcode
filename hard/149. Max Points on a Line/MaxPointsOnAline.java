@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.hard;
+package Java.leetcodeSolution.hard;
 //Question Link Below
 //https://leetcode.com/problems/max-points-on-a-line/
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.medium;
+package Java.leetcodeSolution.medium;
 //Question Link Below
 //https://leetcode.com/problems/spiral-matrix-ii/
 import java.util.Arrays;

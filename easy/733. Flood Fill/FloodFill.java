@@ -1,4 +1,4 @@
-package Java.leetcodeSolutions.easy;
+package Java.leetcodeSolution.easy;
 //question link
 //https://leetcode.com/problems/flood-fill/description/
 public class FloodFill {
