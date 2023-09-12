@@ -1,66 +1,39 @@
 package Java.leetcodeSolution.medium;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
-//Question link below
 //https://leetcode.com/problems/insert-delete-getrandom-o1/
 public class RandomizedSet {
-    private Random random=new Random();
-    private HashMap<Integer,Node> map;
-    private class Node{
-        int val;
-        Node next;
-        Node prev;
-        public Node(int val){
-            this.val=val;
-            this.next=null;
-            this.prev=null;
-        }
-        public Node(){};
-    }
-    private Node head;
-    private Node tail;
-    private int size;
+    private Random random;
+    private HashMap<Integer,Integer> map;
+    private List<Integer> list;
     public RandomizedSet() {
         map=new HashMap<>();
-        head=new Node(0);
-        tail=head;
-        size=0;
+        list=new ArrayList<>();
+        random=new Random();
     }
 
     public boolean insert(int val) {
-        if(!map.containsKey(val)){
-            Node temp=new Node(val);
-            map.put(val,temp);
-            tail.next=temp;
-            temp.prev=tail;
-            tail=temp;
-            size++;
-            return true;
-        }
-        return false;
+        if(map.containsKey(val)) return false;
+        map.put(val,list.size());
+        list.add(val);
+        return true;
     }
 
     public boolean remove(int val) {
-        if(!map.containsKey(val)){
-            return false;
+        if(!map.containsKey(val)) return false;
+        int indexToRemove=map.get(val);
+        int lastVal=list.remove(list.size()-1);//deletes last index of list
+        if(lastVal!=val){ //if lastVal!=val
+            list.set(indexToRemove,lastVal);
+            map.put(lastVal,indexToRemove);
         }
-        Node temp=map.get(val);
-        if(temp==tail){
-            tail=tail.prev;
-        }
-        if(temp.next!=null) temp.next.prev=temp.prev;
-        if(temp.prev!=null)temp.prev.next=temp.next;
         map.remove(val);
-        size--;
         return true;
     }
 
     public int getRandom() {
-        int rand=random.nextInt(size);
-        Node temp=head.next;
-        for (int i = 0; i < rand ; i++) {
-            temp=temp.next;
-        }
-        return temp.val;
+        return list.get(random.nextInt(list.size()));
     }
 }
