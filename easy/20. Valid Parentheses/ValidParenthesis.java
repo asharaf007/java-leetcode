@@ -7,25 +7,17 @@ public class ValidParenthesis {
         System.out.println(isValid(s));
     }
     public static boolean isValid(String s) {
-        Stack<Character> st=new Stack<>();
-        HashMap<Character,Character> map=new HashMap<>();
-        map.put('{','}');
-        map.put('(',')');
-        map.put('[',']');
-        HashSet<Character> closing=new HashSet<>();
-        closing.add('}');
-        closing.add(')');
-        closing.add(']');
+        Deque<Character> stack=new ArrayDeque<>();
         for(int i=0;i<s.length();i++){
-            if(!st.isEmpty()&&s.charAt(i)==map.get(st.peek())){
-                st.pop();
-                continue;
+            char ch=s.charAt(i);
+            if(ch=='}'||ch==')'||ch==']'){
+                if(stack.isEmpty()) return false;
+                if(ch=='}') if(stack.pop()!='{') return false;
+                if(ch==']') if(stack.pop()!='[') return false;
+                if(ch==')') if(stack.pop()!='(') return false;
             }
-            if(closing.contains(s.charAt(i))){
-                return false;
-            }
-            st.push(s.charAt(i));
+            else stack.push(ch);
         }
-        return st.isEmpty();
+        return stack.isEmpty();
     }
 }
