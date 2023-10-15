@@ -10,24 +10,14 @@ public class GroupAnagrams {
     }
     public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> ans=new ArrayList<>();
-        Set<char[]> set=new HashSet<>();
+        HashMap<String ,List<String>> map=new HashMap<>();
         for(int i=0;i<strs.length;i++){
             char[] c=strs[i].toCharArray();
             Arrays.sort(c);
-            if(!set.contains(c)) {
-                set.add(c);
-                List<String> list = new ArrayList<>();
-                list.add(strs[i]);
-                for (int j = i+1; j < strs.length; j++) {
-                    char[] s = strs[j].toCharArray();
-                    Arrays.sort(s);
-                    if (set.contains(s)) {
-                        list.add(strs[j]);
-                    }
-                }
-                ans.add(list);
-            }
+            String s=String.valueOf(c);
+            if(!map.containsKey(s)) map.put(s,new ArrayList<>());
+            map.get(s).add(strs[i]);
         }
-        return ans;
+        return new ArrayList<>(map.values());
     }
 }
