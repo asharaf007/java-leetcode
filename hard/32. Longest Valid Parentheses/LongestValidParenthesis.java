@@ -7,9 +7,10 @@ import java.util.Deque;
 //https://leetcode.com/problems/longest-valid-parentheses/
 public class LongestValidParenthesis {
     public static void main(String[] args) {
-        String s="()(()(())()))))())()()()()()";
+        String s = "()(()(())()))))())()()()()()";
         System.out.println(longestValidParentheses(s));
     }
+
     public static int longestValidParentheses(String s) {
         int max_length = 0;
         Deque<Integer> stack = new ArrayDeque<>();

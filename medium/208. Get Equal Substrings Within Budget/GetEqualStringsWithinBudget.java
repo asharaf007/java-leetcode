@@ -5,8 +5,9 @@ import java.util.Arrays;
 //https://leetcode.com/problems/get-equal-substrings-within-budget/
 public class GetEqualStringsWithinBudget {
     public static void main(String[] args) {
-        System.out.println(equalSubstring("krpgjbjjznpzdfy","nxargkbydxmsgby",14));
+        System.out.println(equalSubstring("krpgjbjjznpzdfy", "nxargkbydxmsgby", 14));
     }
+
     public static int equalSubstring(String s, String t, int maxCost) {
         int l = 0, r = 0;
         while (r < s.length()) {

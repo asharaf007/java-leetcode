@@ -6,20 +6,20 @@ import Java.OOPS.customDataStructures.linkedList.ListNode;
 
 public class LinkedListCycle1 {
     public boolean hasCycle(ListNode head) {
-        if(head==null){
+        if (head == null) {
             return false;
         }
-        if(head.next==null){
-            return head.next==head;
+        if (head.next == null) {
+            return head.next == head;
         }
-        ListNode fast=head.next.next;
-        ListNode slow=head.next;
-        while(fast!=null&&fast.next!=null){
-            if(fast==slow){
+        ListNode fast = head.next.next;
+        ListNode slow = head.next;
+        while (fast != null && fast.next != null) {
+            if (fast == slow) {
                 return true;
             }
-            fast=fast.next.next;
-            slow=slow.next;
+            fast = fast.next.next;
+            slow = slow.next;
         }
         return false;
     }

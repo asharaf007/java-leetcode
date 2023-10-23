@@ -10,22 +10,24 @@ public class FlattenNodes {
         public Node prev;
         public Node next;
         public Node child;
-    };
+    }
+
+    ;
+
     public Node flatten(Node head) {
-        Deque<Node> stack=new ArrayDeque<>();
-        Node curr=head;
-        while(!stack.isEmpty()||curr.next!=null||curr.child!=null){
-            if(curr.child!=null){
+        Deque<Node> stack = new ArrayDeque<>();
+        Node curr = head;
+        while (!stack.isEmpty() || curr.next != null || curr.child != null) {
+            if (curr.child != null) {
                 stack.push(curr.next);
-                curr.next=curr.child;
-                curr.next.prev=curr;
-                curr.child=null;
+                curr.next = curr.child;
+                curr.next.prev = curr;
+                curr.child = null;
+            } else if (curr.next == null) {
+                curr.next = stack.pop();
+                curr.next.prev = curr;
             }
-            else if(curr.next==null){
-                curr.next=stack.pop();
-                curr.next.prev=curr;
-            }
-            curr=curr.next;
+            curr = curr.next;
         }
         return head;
     }

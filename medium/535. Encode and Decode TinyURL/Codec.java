@@ -1,4 +1,5 @@
 package Java.leetcodeSolution.medium;
+
 //https://leetcode.com/problems/encode-and-decode-tinyurl/
 public class Codec {
 

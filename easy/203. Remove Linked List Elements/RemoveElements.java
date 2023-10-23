@@ -5,7 +5,7 @@ import Java.OOPS.customDataStructures.linkedList.ListNode;
 //https://leetcode.com/problems/remove-linked-list-elements/
 public class RemoveElements {
     public ListNode removeElements(ListNode head, int val) {
-                                                            //iterative way
+        //iterative way
         /*
         while(head!=null&&head.val==val){
             head=head.next;
@@ -24,14 +24,14 @@ public class RemoveElements {
         }
         return head;
          */
-                                                            //recursive way
-        if(head==null){
+        //recursive way
+        if (head == null) {
             return null;
         }
-        if(head.val==val){
-            return removeElements(head.next,val);
+        if (head.val == val) {
+            return removeElements(head.next, val);
         }
-        head.next=removeElements(head.next,val);
+        head.next = removeElements(head.next, val);
         return head;
     }
 }

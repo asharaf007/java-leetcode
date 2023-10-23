@@ -1,6 +1,7 @@
 package Java.leetcodeSolution.easy;
 
 import java.util.*;
+
 //question link
 //https://leetcode.com/problems/implement-queue-using-stacks/
 class ImplementQueueUsingTwoStacks {
@@ -12,30 +13,33 @@ class ImplementQueueUsingTwoStacks {
         this.st2 = new Stack<>();
     }
 
-    public void push(int x){
+    public void push(int x) {
         st1.push(x);
     }
-    public int pop(){
-        while(!st1.isEmpty()){
+
+    public int pop() {
+        while (!st1.isEmpty()) {
             st2.push(st1.pop());
         }
-        int removed=st2.pop();
-        while(!st2.isEmpty()){
+        int removed = st2.pop();
+        while (!st2.isEmpty()) {
             st1.push(st2.pop());
         }
         return removed;
     }
-    public int peek(){
-        while(!st1.isEmpty()){
+
+    public int peek() {
+        while (!st1.isEmpty()) {
             st2.push(st1.pop());
         }
-        int peek=st2.peek();
-        while(!st2.isEmpty()){
+        int peek = st2.peek();
+        while (!st2.isEmpty()) {
             st1.push(st2.pop());
         }
         return peek;
     }
-    public boolean empty(){
+
+    public boolean empty() {
         return st1.isEmpty();
     }
 }

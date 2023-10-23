@@ -1,11 +1,13 @@
 package Java.leetcodeSolution.medium;
+
 //https://leetcode.com/problems/search-a-2d-matrix/
 public class SearchInSortedMatrix {
     public static void main(String[] args) {
-        int[][] matrix={{3, 30, 38},{36, 43, 60},{40, 51, 69}};
+        int[][] matrix = {{3, 30, 38}, {36, 43, 60}, {40, 51, 69}};
         System.out.println(search(matrix, 45));
     }
-    static boolean search(int matrix[][],int target) {
+
+    static boolean search(int matrix[][], int target) {
         int m = matrix.length;
         int n = matrix[0].length;
         int st = 0;

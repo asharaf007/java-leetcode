@@ -1,12 +1,15 @@
 package Java.leetcodeSolution.medium;
 //Question Link Below
 //https://leetcode.com/problems/spiral-matrix/
+
 import java.util.*;
+
 public class SpiralMatrix {
     public static void main(String[] args) {
-        int[][] matrix={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
         System.out.println(spiralOrder(matrix));
     }
+
     public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> ans = new ArrayList<>();
         int row_end = matrix.length;
@@ -16,13 +19,13 @@ public class SpiralMatrix {
         int count = row_end * col_end;
         int row = 0;
         int col = 0;
-        while (count>0) {
+        while (count > 0) {
             while (col < col_end) {
                 ans.add(matrix[row][col]);
                 col++;
                 count--;
             }
-            if(count==0){
+            if (count == 0) {
                 return ans;
             }
             col--;
@@ -33,7 +36,7 @@ public class SpiralMatrix {
                 row++;
                 count--;
             }
-            if(count==0){
+            if (count == 0) {
                 return ans;
             }
             row--;
@@ -44,18 +47,18 @@ public class SpiralMatrix {
                 col--;
                 count--;
             }
-            if(count==0){
+            if (count == 0) {
                 return ans;
             }
             col++;
             row--;
             row_end--;
-            while (row >=row_start) {
+            while (row >= row_start) {
                 ans.add(matrix[row][col]);
                 row--;
                 count--;
             }
-            if(count==0){
+            if (count == 0) {
                 return ans;
             }
             row++;
