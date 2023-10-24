@@ -1,12 +1,19 @@
 package Java.leetcodeSolution.hard;
 
+import java.util.Scanner;
+
 interface MountainArray {
+    int length=10000;
+    int[] arr=new int[length];
+    private void populate(Scanner in){
+        for(int i=0;i<length;i++) arr[i]=in.nextInt();
+    }
     public default int get(int index) {
-        return 1;
+        return arr[index];
     }
 
     public default int length() {
-        return 1;
+        return length;
     }
 }
 
