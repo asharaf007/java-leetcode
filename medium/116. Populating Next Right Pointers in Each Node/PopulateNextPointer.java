@@ -23,15 +23,16 @@ class Node {
 public class PopulateNextPointer {
     public Node connect(Node root) {
         if(root==null) return root;
-        Queue<Node> q=new LinkedList<>();
-        q.add(root);
-        int size=q.size();
-        while(!q.isEmpty()) {
-            Node node=q.poll();
-            if(node.left!=null) q.add(node.left);
-            if(node.right!=null) q.add(node.right);
-            if(--size>0)node.next=q.peek();
-            else size=q.size();
+        Node leftMost=root;
+        while(leftMost.left!=null){
+            Node curr=leftMost;
+            while(true){
+                curr.left.next=curr.right;
+                if(curr.next==null) break;
+                curr.right.next=curr.next.left;
+                curr=curr.next;
+            }
+            leftMost=leftMost.left;
         }
         return root;
     }
