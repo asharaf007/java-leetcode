@@ -23,6 +23,8 @@ public class BFSII {
                 count=q.size();
             }
         }
-        return ans.reversed();
+        List<List<Integer>> n=new ArrayList<>();
+        for(int i=ans.size(); --i>=0;) n.add(ans.get(i));
+        return n;
     }
 }
