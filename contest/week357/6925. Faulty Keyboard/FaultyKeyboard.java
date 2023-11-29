@@ -1,4 +1,4 @@
-package Java.leetcodeSolution.Contests.week357;
+package Java.leetcodeSolution.contest.week357;
 
 //https://leetcode.com/contest/weekly-contest-357/problems/faulty-keyboard/
 public class FaultyKeyboard {

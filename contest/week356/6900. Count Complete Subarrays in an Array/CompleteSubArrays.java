@@ -1,6 +1,5 @@
-package Java.leetcodeSolution.Contests.week356;
+package Java.leetcodeSolution.contest.week356;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 //https://leetcode.com/contest/weekly-contest-356/problems/count-complete-subarrays-in-an-array/

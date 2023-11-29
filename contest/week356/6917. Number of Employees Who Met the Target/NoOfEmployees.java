@@ -1,4 +1,4 @@
-package Java.leetcodeSolution.Contests.week356;
+package Java.leetcodeSolution.contest.week356;
 
 //https://leetcode.com/contest/weekly-contest-356/problems/number-of-employees-who-met-the-target/
 public class NoOfEmployees {

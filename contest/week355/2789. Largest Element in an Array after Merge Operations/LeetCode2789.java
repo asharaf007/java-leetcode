@@ -1,4 +1,4 @@
-package Java.leetcodeSolution.Contests.week355;
+package Java.leetcodeSolution.contest.week355;
 
 //https://leetcode.com/contest/weekly-contest-355/problems/largest-element-in-an-array-after-merge-operations/
 public class LeetCode2789 {

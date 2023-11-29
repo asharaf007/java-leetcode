@@ -2,7 +2,7 @@ package Java.leetcodeSolution.easy;
 
 //https://leetcode.com/problems/sqrtx/
 public class SquareRoot {
-    public int mySqrt(int x) {
+    public static int mySqrt(int x) {
         long st = 0;
         long end = x + 1 / 2;
         long mid = st + (end - st) / 2;

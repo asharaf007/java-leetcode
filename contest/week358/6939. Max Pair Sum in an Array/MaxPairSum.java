@@ -1,4 +1,4 @@
-package Java.leetcodeSolution.Contests.week358;
+package Java.leetcodeSolution.contest.week358;
 
 //https://leetcode.com/contest/weekly-contest-358/problems/max-pair-sum-in-an-array/
 public class MaxPairSum {
