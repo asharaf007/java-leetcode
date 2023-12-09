@@ -37,21 +37,9 @@ public class MergeBSTs {
     }
     private void dfs(TreeNode root,Map<Integer,TreeNode> map,Set<Integer> set){
         if(root==null) return;
-        if(root.left!=null){
-            if(map.containsKey(root.left.val)){
-                TreeNode left=map.get(root.left.val);
-                root.left=left;
-                map.remove(root.left.val);
-                dfs(root.left,map,set);
-            }
-        }
-        if(root.right!=null){
-            if(map.containsKey(root.right.val)){
-                TreeNode right=map.get(root.right.val);
-                root.right=right;
-                map.remove(root.right.val);
-                dfs(root.right,map,set);
-            }
-        }
+        if(root.left!=null&&map.containsKey(root.left.val)) root.left=map.remove(root.left.val);
+        if(root.right!=null&&map.containsKey(root.right.val)) root.right=map.remove(root.right.val);
+        dfs(root.left,map,set);
+        dfs(root.right,map,set);
     }
 }
