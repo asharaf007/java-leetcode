@@ -2,6 +2,9 @@ package Java.leetcodeSolution.easy;
 
 //https://leetcode.com/problems/sqrtx/
 public class SquareRoot {
+    public static void main(String[] args) {
+        System.out.println(mySqrt(67));
+    }
     public static int mySqrt(int x) {
         long st = 0;
         long end = x + 1 / 2;

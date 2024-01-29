@@ -5,9 +5,10 @@ import java.util.HashMap;
 //https://leetcode.com/problems/roman-to-integer/description/
 public class RomanToInteger {
     public static void main(String[] args) {
+        var height = "asharaf";//var keyword has come to java
+        System.out.println(height);
         System.out.println(romanToInt("LVIII"));
     }
-
     private static final HashMap<Character, Integer> map = new HashMap<>() {
         {
             put('I', 1);
