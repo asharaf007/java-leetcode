@@ -28,7 +28,6 @@ public class SudokuSolver {
     }
 
     public static void solve1(char[][] board, int r, int c) {
-        //https://leetcode.com/problems/sudoku-solver/
 
         //if we go out of matrix means we checked all position so, we should simply return
         if (r == board.length - 1 && c == board[0].length) {

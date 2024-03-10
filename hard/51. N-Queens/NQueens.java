@@ -10,7 +10,6 @@ public class NQueens {
         int n = 4;
         System.out.println(solveNQueens(n));
     }
-    //main method overloading
     private static boolean[][] visited;
 
     public static List<List<String>> solveNQueens(int n) {
