@@ -6,13 +6,6 @@ public class SameValue {
     public static void main(String[] args) {
         SameValue sameValue = new SameValue();
         int[] nums = { 6, 2, 2, 2, 6 };
-        // int[] nums = { 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2 };
-
-        // int[][] edges = { { 12, 14 }, { 14, 8 }, { 8, 4 }, { 4, 16 }, { 16, 1 }, { 1,
-        // 15 }, { 15, 5 }, { 5, 6 },
-        // { 6, 9 }, { 9, 10 }, { 10, 17 }, { 17, 19 }, { 19, 13 }, { 13, 0 }, { 0, 2 },
-        // { 2, 3 }, { 3, 18 },
-        // { 18, 7 }, { 7, 11 } };
         int[][] edges = { { 0, 1 }, { 1, 2 }, { 1, 3 }, { 3, 4 } };
         System.out.println(sameValue.componentValue(nums, edges));
     }
