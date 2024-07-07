@@ -29,7 +29,7 @@ public class LongestPath {
                 subResults.add(res);
             }
         }
-        int first, second = 0;
+        int first = 0, second = 0;
         for (int i = 0; i < subResults.size(); i++) {
             int num = subResults.get(i);
             if (num > first) {
