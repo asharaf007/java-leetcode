@@ -1,4 +1,8 @@
 //https://leetcode.com/contest/weekly-contest-405/problems/generate-binary-strings-without-adjacent-zeros/
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryStrings {
     List<String> res;
 
