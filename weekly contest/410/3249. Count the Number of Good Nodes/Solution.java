@@ -1,4 +1,8 @@
 //https://leetcode.com/problems/count-the-number-of-good-nodes/
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     int ans;
     List<Integer>[] graph;
@@ -16,7 +20,7 @@ public class Solution {
         return ans;
     }
     private int dfs(int node,int parent){
-        List<Integer> counts=new ArrayList<>();
+        List<Integer> counts=new ArrayList()<>();
         for(int child:graph[node]){
             if(child==parent){
                 continue;
@@ -41,5 +45,4 @@ public class Solution {
         }
         return count;
     }
-}
 }
