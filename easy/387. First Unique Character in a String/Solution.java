@@ -24,12 +24,6 @@ class Solution {
                 firstOccurence[c-'a']=-2; // -2 means character has been seen more than 1 time
             }
         }
-        // while(!q.isEmpty()){
-        //     int i=q.poll()-'a';
-        //     if(firstOccurence[i]>=0){
-        //         return firstOccurence[i];
-        //     }
-        // }
         return q.isEmpty()?-1:firstOccurence[q.peek()-'a'];
     }
 }
