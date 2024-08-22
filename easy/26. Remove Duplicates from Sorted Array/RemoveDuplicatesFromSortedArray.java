@@ -8,23 +8,13 @@ public class RemoveDuplicatesFromSortedArray {
     }
 
     public int removeDuplicates(int[] nums) {
-        int prevNum = nums[0];
-        int k = 1;
-        int i = 1;
-        int j = 1;
+        int i = 0, j = 1;
         while (j < nums.length) {
-            while (j < nums.length && nums[j] == prevNum) {
-                j++;
+            if (nums[j] != nums[i]) {
+                nums[++i] = nums[j];
             }
-            if (j == nums.length) {
-                break;
-            }
-            nums[i] = nums[j];
-            prevNum = nums[j];
-            i++;
             j++;
-            k++;
         }
-        return k;
+        return i + 1;
     }
 }
