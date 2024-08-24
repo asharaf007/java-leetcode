@@ -1,4 +1,7 @@
 //https://leetcode.com/problems/snake-in-matrix/
+
+import java.util.List;
+
 public class Solution {
     public int finalPositionOfSnake(int n, List<String> commands) {
         int row=0;
