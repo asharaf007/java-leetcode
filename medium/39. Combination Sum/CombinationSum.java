@@ -12,38 +12,26 @@ public class CombinationSum {
         }
     }
 
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> ans = new ArrayList<>();
-        solve(candidates, new ArrayList<>(), ans, target, 0);
+        Arrays.sort(candidates);
+        helper(ans, candidates, 0, target,new ArrayList<>());
         return ans;
     }
 
-    private static void solve(int[] candidates, List<Integer> list, List<List<Integer>> ans, int target, int i) {
-        if (target == 0) {
-            ans.add(new ArrayList<>(list));
+    private void helper(List<List<Integer>> ans, int[] arr, int i, int target, List<Integer> sub) {
+        if (target==0) {
+            ans.add(new ArrayList<>(sub));
             return;
         }
-        if (target < 0 || i == candidates.length) {
+        if (i == arr.length || arr[i] > target) {
             return;
         }
-        solve(candidates, list, ans, target, i + 1);
-        int j = 1;
-        while (target >= 0) {
-            int k = j;
-            //make changes in list
-            while (k > 0) {
-                list.add(candidates[i]);
-                k--;
-            }
-            target -= candidates[i];
-            solve(candidates, list, ans, target, i + 1);
-            k = j;
-            //revert changes in list->backtracking
-            while (k > 0) {
-                list.remove(list.size() - 1);
-                k--;
-            }
-            j++;
-        }
+        // take it
+        sub.add(arr[i]);
+        helper(ans, arr, i, target - arr[i], sub);
+        // leave it
+        sub.remove(sub.size()-1);
+        helper(ans, arr, i + 1, target, sub);
     }
 }
