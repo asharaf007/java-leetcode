@@ -1,37 +1,26 @@
-package Java.leetcodeSolution.medium;
 //https://leetcode.com/problems/combination-sum-ii/
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class CombinationSum2 {
-    public static void main(String[] args) {
-        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
-        System.out.println(combinationSum2(candidates, 8));
-    }
-
-    public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> ans = new ArrayList<>();
+class Solution {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
-        solve(candidates, new ArrayList<>(), ans, target, 0);
+        List<List<Integer>> ans=new ArrayList<>();
+        helper(ans,new ArrayList<>(),candidates,0,target);
         return ans;
     }
-
-    private static void solve(int[] candidates, List<Integer> list, List<List<Integer>> ans, int target, int i) {
-        if (target == 0) {
-            ans.add(new ArrayList<>(list));
+    private void helper(List<List<Integer>> a,List<Integer> s,int[] c,int i,int t){
+        if(t==0){
+            a.add(new ArrayList<>(s));
             return;
         }
-        if (target < 0 || i == candidates.length) {
+        if(i==c.length||c[i]>t){
             return;
         }
-        int num = candidates[i];
-        list.add(num);
-        solve(candidates, list, ans, target - num, i + 1);
-        list.remove(list.size() - 1);
-        //skip steps having repeated value
-        while (i + 1 < candidates.length && candidates[i] == candidates[i + 1]) i++;
-        solve(candidates, list, ans, target, i + 1);
+        for(int j=i;j<c.length;j++){
+            if(j>i&&c[j]==c[j-1]){
+                continue;
+            }
+            s.add(c[j]);
+            helper(a,s,c,j+1,t-c[j]);
+            s.remove(s.size()-1);
+        }
     }
 }
